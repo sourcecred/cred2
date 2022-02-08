@@ -18,7 +18,7 @@ jobs:
           ref: 'gh-pages'
       - name: Remove old cache from gh-pages branch
         run: |
-          rm -r -f ./cache
+          rm -rf ./cache || true
           git config user.name 'credbot'
           git config user.email 'credbot@users.noreply.github.com'
           git add ./cache
