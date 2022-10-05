@@ -13,7 +13,7 @@ jobs:
   GenerateCredInstance:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
         with:
           ref: 'gh-pages'
 
@@ -26,7 +26,7 @@ jobs:
           git commit --amend --no-edit
           git push --force-with-lease
           
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
         with:
           ref: 'main'
           persist-credentials: false # Required to make github pages deployment work correctly
